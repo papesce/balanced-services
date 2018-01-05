@@ -1,15 +1,16 @@
 module.exports = {
   siteMetadata: {
-    title: 'Oliver Benns',
-    url: 'https://oliverbenns.com',
-    description: 'Oliver Benns is a freelance web developer working with individuals and agencies across the world.',
+    title: 'Pablo Pesce',
+    url: 'https://papesce.github.io/oliver/',
+    description: 'Pablo Pesce is a FullStack web developer building React/React Native apps.',
   },
-  plugins: [
-    {
-      resolve: 'gatsby-plugin-google-analytics',
-      options: {
-        trackingId: 'UA-42854706-1',
-      },
-    },
-  ],
+  pathPrefix: '/oliver',
+  // plugins: [
+  //   {
+  //     resolve: 'gatsby-plugin-google-analytics',
+  //     options: {
+  //       trackingId: 'UA-42854706-1',
+  //     },
+  //   },
+  // ],
 };

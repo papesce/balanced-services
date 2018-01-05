@@ -9,7 +9,6 @@ const styles = isProduction ? require('!raw-loader!../public/styles.css') : null
 
 const Html = ({ body, headComponents, postBodyComponents }) => {
   const helmet = Helmet.rewind();
-
   return (
     <html lang="en">
       <head>
@@ -27,8 +26,8 @@ const Html = ({ body, headComponents, postBodyComponents }) => {
         <meta property="og:type" content="website" />
         <meta property="og:image" content={openGraphUrl} />
         <meta name="twitter:card" content="summary_large_image" />
-        <meta name="twitter:site" content="@oliverbenns" />
-        <meta name="twitter:creator" content="@oliverbenns" />
+        <meta name="twitter:site" content="@papesce" />
+        <meta name="twitter:creator" content="@papesce" />
         <meta property="twitter:image" content={openGraphUrl} />
 
         {/* Favicon */}

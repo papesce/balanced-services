@@ -1,9 +1,9 @@
 {
-  "name": "oliverbenns",
+  "name": "pablopesce",
   "version": "1.0.0",
   "description": "",
   "license": "MIT",
-  "author": "Oliver Benns",
+  "author": "Pablo Pesce",
   "dependencies": {
     "classnames": "^2.2.5",
     "gatsby": "^1.8.4",
@@ -18,13 +18,16 @@
     "eslint-config-airbnb": "^15.1.0",
     "eslint-plugin-import": "^2.7.0",
     "eslint-plugin-jsx-a11y": "^6.0.2",
-    "eslint-plugin-react": "^7.2.1"
+    "eslint-plugin-react": "^7.2.1",
+    "gh-pages": "^1.1.0"
   },
   "main": "n/a",
   "scripts": {
     "lint": "eslint --ext .js,.jsx --ignore-path .gitignore .",
-    "build": "rm -rf public; gatsby build",
+    "build": "rm -rf ../../myrepo/papesce.github.io/oliver; gatsby build --prefix-paths",
+    "postbuild": "mv public ../../myrepo/papesce.github.io/",
     "develop": "gatsby develop",
+    "deploy": "gatsby build --prefix-paths",
     "test": "echo \"Error: no test specified\" && exit 1"
   }
 }

@@ -1,13 +1,13 @@
 const projects = [
   {
     className: 'click',
-    description: 'Australia\'s first mobile App that helps busy families quickly find and secure available childcare.',
+    description: 'Balanced Services officila home page.',
     links: {
       ios: 'https://itunes.apple.com/app/id1175973285',
       android: 'https://play.google.com/store/apps/details?id=com.clickchildcareapp',
     },
     slug: 'click-childcare',
-    title: 'Click Childcare',
+    title: 'Balanced Services',
     cover: require('./click.png'),
     theme: {
       background: '#00a5d1',
@@ -15,12 +15,12 @@ const projects = [
   },
   {
     className: 'kindyNow',
-    description: 'Web app to allow childcare centre managers to monitor and control absences, bookings and capacities.',
+    description: 'State of the are work-life balanced tool.',
     links: {
       website: 'https://kindynow.com/admin',
     },
     slug: 'kindynow',
-    title: 'KindyNow',
+    title: 'Balanced Life',
     cover: require('./kindynow.png'),
     theme: {
       background: '#F7F7F7',
@@ -29,13 +29,13 @@ const projects = [
   },
   {
     className: 'chadstone',
-    description: 'A rebuild of the existing website in line with the unveiling of the mall\'s new shopping, dining & entertainment precincts.',
+    description: 'Smart personal assitant for gym workouts.',
     clientDescription: 'Chadstone Shopping Centre is a shopping centre located in the city of Melbourne, Australia. Since opening in 1960, it is now the biggest shopping centre in the country with over 500 stores.',
     links: {
       website: 'https://www.chadstone.com.au',
     },
     slug: 'chadstone',
-    title: 'Chadstone',
+    title: 'Balanced Gym',
     cover: require('./chadstone.jpg'),
     theme: {
       background: '#a77e60',

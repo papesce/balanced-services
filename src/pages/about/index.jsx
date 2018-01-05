@@ -44,7 +44,7 @@ const About = ({ location }) => (
       </div>
 
       <section>
-        <h2>What people say</h2>
+        {/* <h2>What people say</h2>
         <div className={styles.referrals}>
           <div className={styles.referral}>
             <img src={lighthouseSrc} alt="Lighthouse logo" />
@@ -69,7 +69,7 @@ const About = ({ location }) => (
               <p>“I worked with Oliver on a number of projects for the Ahm websites. When a new brief would come in he was consultative and logical in his approach to help us define a solution to our business problem. His collaborative approach and comfort with clients/business makes him a great addition to a digital development team.”</p>
             </div>
           </div>
-        </div>
+        </div> */}
       </section>
     </Wrapper>
   </ContentPage>
