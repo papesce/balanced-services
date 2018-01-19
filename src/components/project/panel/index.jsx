@@ -8,11 +8,11 @@ import themeStyles from '../themes.module.css';
 import styles from './styles.module.css';
 
 const ProjectPanel = ({ project }) => (
-  <Link
-    to={`/work/${project.slug}`}
-    className={classNames(styles.panel, themeStyles[project.theme.light ? 'light' : 'dark'], styles[project.className])}
-    style={{ background: `${project.theme.background}` }}
-  >
+   <div
+     // to={`/work/${project.slug}`}
+     className={classNames(styles.panel, themeStyles[project.theme.light ? 'light' : 'dark'], styles[project.className])}
+     style={{ background: `${project.theme.background}` }}
+   >
     <Wrapper>
       <div className={styles.inner} style={{ backgroundImage: `url(${project.cover})` }}>
         <div className={styles.content}>
@@ -21,7 +21,7 @@ const ProjectPanel = ({ project }) => (
         </div>
       </div>
     </Wrapper>
-  </Link>
+   </div>
 );
 
 export default ProjectPanel;

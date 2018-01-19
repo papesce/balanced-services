@@ -36,7 +36,7 @@ const projects = [
     },
     slug: 'chadstone',
     title: 'Balanced Gym',
-    cover: require('./chadstone.jpg'),
+    cover: require('./bg.png'),
     theme: {
       background: '#a77e60',
     },
