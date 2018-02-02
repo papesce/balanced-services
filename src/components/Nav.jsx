@@ -11,12 +11,12 @@ class Nav extends Component {
     return (
       <nav>
         <div className={`topnav ${this.state.resp ? " responsive" : ""}`} id="myTopnav">
-          <a href="#home" class="active">
-            Home
+          <a href="/" class="active">
+            Balanced Services
           </a>
-          <a href="#news">News</a>
-          <a href="#contact">Contact</a>
-          <a href="#about">About</a>
+          <a href="/services">Services</a>
+          <a href="/about">About</a>
+          <a href="/contact">Contact</a>
           <a
             href="javascript:void(0);"
             className="icon"
