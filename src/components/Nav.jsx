@@ -1,36 +1,34 @@
-import React, {Component} from "react"
-import "./Nav.css"
-
+import React, { Component } from "react";
+import "./Nav.css";
 
 class Nav extends Component {
-  burgerToggle = ()  => {
-    let linksEl = document.querySelector('.narrowLinks');
-      if (linksEl.style.display === 'block') {
-                linksEl.style.display = 'none';
-            } else {
-                linksEl.style.display = 'block';
-            }
-  } 
+  state = { resp : false}
+  myFunction = () =>  {
+    // debugger;
+    this.setState((prevState) => {return {resp: !prevState.resp }})
+  }
   render() {
-       return  (<nav>
-         <div className="navWide">
-          <div className="wideDiv">
-           <a href="#">Link 1</a>
-           <a href="#">Link 2</a>
-           <a href="#">Link 3</a>
-         </div>
+    return (
+      <nav>
+        <div className={`topnav ${this.state.resp ? " responsive" : ""}`} id="myTopnav">
+          <a href="#home" class="active">
+            Home
+          </a>
+          <a href="#news">News</a>
+          <a href="#contact">Contact</a>
+          <a href="#about">About</a>
+          <a
+            href="javascript:void(0);"
+            className="icon"
+            style={{fontSize: "15px"}}
+            onClick={this.myFunction}
+          >
+            &#9776;
+          </a>
         </div>
-        <div className="navNarrow">
-          <i className="fa fa-bars fa-2x" onClick={this.burgerToggle}></i>
-           <div className="narrowLinks">
-             <a href="#">Link 1</a>
-             <a href="#">Link 2</a>
-             <a href="#">Link 3</a>
-          </div>
-        </div> 
-     </nav>)
-   }  
+      </nav>
+    );
+  }
 }
 
-
-export default Nav
+export default Nav;
