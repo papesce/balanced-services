@@ -2,6 +2,7 @@ import React, { Component } from "react";
 import logo from "./logo.svg";
 import "./App.css";
 import Header from "./components/Header";
+import Footer from "./components/Footer";
 import Main from "./components/Main";
 import About from "./components/About";
 import Contact from "./components/Contact";
@@ -23,7 +24,8 @@ class App extends Component {
             <Route exact path="/contact" component={Contact} />
             <Route exact path="/services" component={Services} />
             <Route path="/" component={Error404}/> 
-          </Switch> 
+          </Switch>
+          <Footer /> 
         </div>
       </BrowserRouter>
     );
