@@ -3,28 +3,45 @@ import logo from "./logo.svg";
 import "./App.css";
 import Header from "./components/Header";
 import Footer from "./components/Footer";
-import Main from "./components/Main";
+import Sections from "./components/Sections";
 import About from "./components/About";
 import Contact from "./components/Contact";
 import Services from "./components/Services";
 import { BrowserRouter, Switch, Route } from "react-router-dom";
+import scrollIntoViewIfNeeded from "scroll-into-view-if-needed";
 
 const Error404 = () => <div>Page Not Found</div>
 
 class App extends Component {
+  constructor(props) {
+    super(props);
+    this.state = {}
+    this.registerNode = this.registerNode.bind(this);
+    this.scrollTo = this.scrollTo.bind(this);
+  }
+  registerNode = (key, node) => {
+    this.services = node;
+  }
+  scrollTo = (event) => {
+    if (this.services) {
+      scrollIntoViewIfNeeded(this.services, {
+        duration: 1500
+      });
+    }
+  }
   render() {
-    // debugger;
     return (
       <BrowserRouter>
         <div className="App">
-          <Header />
-          <Switch> 
-            <Route exact path="/" component={Main} />
+          <Header scrollTo={this.scrollTo}/>
+          <Sections registerNode={this.registerNode}/>
+          {/* <Switch> 
+            <Route exact path="/" component={Sections} />
             <Route exact path="/about" component={About} />
             <Route exact path="/contact" component={Contact} />
             <Route exact path="/services" component={Services} />
             <Route path="/" component={Error404}/> 
-          </Switch>
+          </Switch> */}
           <Footer /> 
         </div>
       </BrowserRouter>

@@ -1,3 +1,3 @@
 import React from "react";
-
-export default () => <div>About</div>
+import "./About.css"
+export default () => <div className="about">About</div>

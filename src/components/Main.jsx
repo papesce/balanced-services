@@ -1,3 +1,4 @@
 import React from "react"
+import "./Main.css"
 
-export default () => <div>Main</div>
+export default () => <div className="main">Main</div>

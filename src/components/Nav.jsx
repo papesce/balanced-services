@@ -2,25 +2,33 @@ import React, { Component } from "react";
 import "./Nav.css";
 
 class Nav extends Component {
-  state = { resp : false}
-  myFunction = () =>  {
-    // debugger;
-    this.setState((prevState) => {return {resp: !prevState.resp }})
+  constructor(props) {
+    super(props);
+    this.state = { resp: false };
   }
+  myFunction = () => {
+    // debugger;
+    this.setState(prevState => {
+      return { resp: !prevState.resp };
+    });
+  };
   render() {
+    const { scrollTo } = this.props;
     return (
       <nav>
-        <div className={`topnav ${this.state.resp ? " responsive" : ""}`} id="myTopnav">
-          <a href="/" class="active">
+        <div
+          className={`topnav ${this.state.resp ? " responsive" : ""}`}
+          id="myTopnav"
+        >
+          <a href="#main" className="active">
             Balanced Services
           </a>
-          <a href="/services">Services</a>
-          <a href="/about">About</a>
-          <a href="/contact">Contact</a>
+          <a onClick={scrollTo}>Services</a>
+          <a href="#about">About</a>
+          <a href="#contact">Contact</a>
           <a
-            href="javascript:void(0);"
             className="icon"
-            style={{fontSize: "15px"}}
+            style={{ fontSize: "15px" }}
             onClick={this.myFunction}
           >
             &#9776;

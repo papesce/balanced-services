@@ -5,4 +5,6 @@
 
 Bootstraped with create-react-app
 
-npm install --save react-router-dom
+npm install --save react-router-dom  (not used for now)
+
+yarn add scroll-into-view-if-needed
