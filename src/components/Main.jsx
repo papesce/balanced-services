@@ -1,4 +1,10 @@
-import React from "react"
+import React, {Component} from "react"
 import "./Main.css"
 
-export default () => <div className="main">Main</div>
+
+class Main extends Component {
+  render(){
+    return (<div className="main">Main</div>)
+  }
+} 
+export default Main;

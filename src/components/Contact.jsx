@@ -1,4 +1,11 @@
-import React from "react"
-import "./Contact.css"
+import React, { Component } from "react";
+import "./Contact.css";
 
-export default () => <div className="contact">Contact</div>
+class Contact extends Component {
+  render() {
+    const { refc } = this.props;
+    return <div ref={refc} className="contact">Contact</div>;
+  }
+}
+
+export default Contact;

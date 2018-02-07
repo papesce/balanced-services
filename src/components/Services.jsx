@@ -1,4 +1,11 @@
-import React from "react"
+import React, {Component} from "react"
 import "./Services.css"
 
-export default () => <div className="services">Services</div>
+class Services extends Component {
+  render(){
+    const { refc } = this.props;
+    return <div ref={refc} className="services">Services</div>
+  }
+}
+
+export default Services

@@ -19,12 +19,13 @@ class App extends Component {
     this.registerNode = this.registerNode.bind(this);
     this.scrollTo = this.scrollTo.bind(this);
   }
-  registerNode = (key, node) => {
-    this.services = node;
+  registerNode = (nodeId, node) => {
+    // debugger;
+    this[nodeId] = node;
   }
-  scrollTo = (event) => {
-    if (this.services) {
-      scrollIntoViewIfNeeded(this.services, {
+  scrollTo = (nodeId) => {
+    if (this[nodeId]) {
+      scrollIntoViewIfNeeded(this[nodeId], {
         duration: 1500
       });
     }

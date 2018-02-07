@@ -23,10 +23,10 @@ class Nav extends Component {
           <a href="#main" className="active">
             Balanced Services
           </a>
-          <a onClick={scrollTo}>Services</a>
-          <a href="#about">About</a>
-          <a href="#contact">Contact</a>
-          <a
+          <a href="#services" onClick={(event) => scrollTo("services")}>Services</a>
+          <a href="#about" onClick={(event) => scrollTo("about")}>About</a>
+          <a href="#contact" onClick={(event) => scrollTo("contact")}>Contact</a>
+          <a 
             className="icon"
             style={{ fontSize: "15px" }}
             onClick={this.myFunction}

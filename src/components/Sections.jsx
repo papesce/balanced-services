@@ -4,20 +4,24 @@ import About from "./About";
 import Contact from "./Contact";
 import Services from "./Services";
 
+
 class Sections extends Component {
-  refCallback = section => {
+  constructor(props){
+    super(props);
+    this.refCallback = this.refCallback.bind(this);
+  }
+  refCallback = (nodeId) => (section) => {
+    // debugger;
     const { registerNode } = this.props;
-    registerNode("services", section);
+    registerNode(nodeId, section);
   };
   render() {
     return (
       <div>
-        <Main />
-        <About />
-        <Contact />
-        <div ref={this.refCallback}>
-          <Services />
-        </div>
+        <Main refc={this.refCallback("main")}/>
+          <About refc={this.refCallback("about")}/>
+          <Contact refc={this.refCallback("contact")}/>
+          <Services refc={this.refCallback("services")}/>
       </div>
     );
   }
