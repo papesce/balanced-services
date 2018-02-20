@@ -3,6 +3,18 @@
 .topnav {
   overflow: hidden;
   background-color: #333;
+  -webkit-transition: height 1s;
+  -moz-transition: height 1s;
+  transition: height 1s;
+  transition: line-height 1s;
+  height: 53px;
+  line-height: 20px;
+}
+
+.topnav.expanded {
+  height: 100px;
+  line-height: 70px;
+  
 }
 
 .topnav a {

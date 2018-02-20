@@ -9,6 +9,8 @@ import Contact from "./components/Contact";
 import Services from "./components/Services";
 import { BrowserRouter, Switch, Route } from "react-router-dom";
 import scrollIntoViewIfNeeded from "scroll-into-view-if-needed";
+import 'react-sticky-header/styles.css';
+import StickyHeader from 'react-sticky-header';
 
 const Error404 = () => <div>Page Not Found</div>
 
@@ -24,6 +26,7 @@ class App extends Component {
     this[nodeId] = node;
   }
   scrollTo = (nodeId) => {
+    
     if (this[nodeId]) {
       scrollIntoViewIfNeeded(this[nodeId], {
         duration: 1500
@@ -34,7 +37,10 @@ class App extends Component {
     return (
       <BrowserRouter>
         <div className="App">
+        <StickyHeader
+        header={
           <Header scrollTo={this.scrollTo}/>
+        }>
           <Sections registerNode={this.registerNode}/>
           {/* <Switch> 
             <Route exact path="/" component={Sections} />
@@ -44,6 +50,7 @@ class App extends Component {
             <Route path="/" component={Error404}/> 
           </Switch> */}
           <Footer /> 
+          </StickyHeader>
         </div>
       </BrowserRouter>
     );
